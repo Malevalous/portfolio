@@ -1,0 +1,40 @@
+---
+import "../styles/global.css";
+import { SEO } from "astro-seo";
+import { ViewTransitions } from "astro:transitions";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <SEO
+      titleDefault="Kshitij Patil"
+      titleTemplate="% / Kshitij Patil"
+      description="Software Developer"
+      openGraph={{
+        basic: {
+          title: "Kshitij Patil",
+          url: "https://malevalous.vercel.app",
+          type: "website",
+          image: "",
+        },
+        optional: {
+          description: "AI Developer",
+          locale: "en-US",
+          siteName: "Kshitij Patil",
+        },
+      }}
+      twitter={{
+        title: "Kshitij Patil",
+        card: "summary_large_image",
+      }}
+    />
+    <ViewTransitions />
+  </head>
+  <body class="bg-black">
+    <slot />
+  </body>
+</html>
