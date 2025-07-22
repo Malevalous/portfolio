@@ -33,7 +33,7 @@ const allProjects = await getCollection("project");
           <div class="grid grid-cols-1 gap-4">
             {
               allProjects
-                .filter((_: any, i) => i % 3 === 0)
+                .filter((_: any, i:number) => i % 3 === 0)
                 .map((project:any) => (
                   <Card client:load>
                     <a href={`/projects/${project.slug}`}>
@@ -47,7 +47,7 @@ const allProjects = await getCollection("project");
           <div class="grid grid-cols-1 gap-4">
             {
               allProjects
-                .filter((_:any, i) => i % 3 === 1)
+                .filter((_:any, i:number) => i % 3 === 1)
                 .map((project:any) => (
                   <Card client:load>
                     <a href={`/projects/${project.slug}`}>
@@ -61,7 +61,7 @@ const allProjects = await getCollection("project");
           <div class="grid grid-cols-1 gap-4">
             {
               allProjects
-                .filter((_:any, i) => i % 3 === 2)
+                .filter((_:any, i:number) => i % 3 === 2)
                 .map((project:any) => (
                   <Card client:load>
                     <a href={`/projects/${project.slug}`}>
